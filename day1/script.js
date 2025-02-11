@@ -1,0 +1,1 @@
+document.getElementById("c").style.backgroundColor="yellow";
