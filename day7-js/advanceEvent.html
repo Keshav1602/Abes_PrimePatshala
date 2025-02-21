@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./advanceEvent.css">
+</head>
+<body>
+    <form onsubmit="handleFormSubmit(event)">
+        <label for="name">Name: </label>
+        <input type="text" placeholder="Name" name="name"  ><br><br>
+        <label for="email">Email: </label>
+        <input type="emal" placeholder="Email" name="email" ><br><br>
+        <label for="city">City: </label>
+        <input type="text" placeholder="City" name="city" ><br><br>
+        <button>Add</button>
+    </form>
+    <h1>Select filter</h1>
+
+    <select onchange="handleSelect(event)" onclick="cityCalibration()">
+        <option value="" disabled selected>Select a city</option>
+        <!-- <option value="delhi">delhi</option>
+        <option value="Noida">noida</option>
+        <option value="mumbai">mumbai</option> -->
+    </select>
+    <div id="root"></div>
+    <script src="./advanceEvent.js"></script>
+</body>
+</html>
