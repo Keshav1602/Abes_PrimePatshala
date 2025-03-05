@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>history</h1>
+    <div class="iframe-container"></div>
+
+    <script>
+        let historytext = localStorage.getItem('youtubeHistory') ? JSON.parse(localStorage.getItem('youtubeHistory')) : [];
+        
+        const iframeContainer = document.querySelector('.iframe-container');
+        historytext = new Set(historytext); // to remove duplicates
+        historytext = [...historytext].reverse(); // to convert set to array
+        historytext.forEach(videoId => {
+            const iframe = document.createElement('iframe');
+            iframe.innerHTML =`
+            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+            iframeContainer.appendChild(iframe);
+        });
+    </script>
+</body>
+</html>

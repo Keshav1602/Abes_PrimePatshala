@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10</title>
+    <style>
+        nav {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            position: relative;
+        }
+
+        nav input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+        }
+
+        nav #location {
+            margin-left: 1rem;
+        }
+        #location {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input onkeyup="handleSearch(event)">
+        <div id="location"></div>
+    </nav>
+    <div id="location-info"></div>
+    <script src="./location.js"></script>
+</body>
+</html>
