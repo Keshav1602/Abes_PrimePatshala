@@ -60,10 +60,12 @@
 const domroot = document.getElementsByClassName('parent')[0];
 const reactRoot = ReactDOM.createRoot(domroot);
 
-// const title = <h1> hello world</h1>
+// functional element
+// const title = <h1> hello world</h1> 
 // reactRoot.render(title);
 
-const Title = ()=>{
+const Title = ()=>{ // functional component
+
  return <h1> hello world</h1>;
 }
 
@@ -71,3 +73,6 @@ const Title = ()=>{
 reactRoot.render(<Title/>);
 
 
+// comopent and element difference
+// component is a function which returns an element
+// element is a javascript object which is returned by component function
